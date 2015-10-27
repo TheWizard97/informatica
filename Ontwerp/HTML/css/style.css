@@ -46,6 +46,31 @@ main{
 	z-index:1;
 	padding:10px;
 }
+#banner{
+	width:calc(100% - 40px);
+	padding:10px;
+	margin:10px;
+	height:150px;
+	background:#666;
+}
+/****/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #bbb;
+}
+td,th {
+    border-top: 1px solid #ddd;
+    padding: 4px 8px;
+}
+tbody tr:nth-child(even)  td { background-color: #eee; }
+@media screen and (max-width: 640px) {
+	table {
+		overflow-x: auto;
+		display: block;
+	}
+}
+/****/
 footer{
 	display:none;
 	text-align:center;
