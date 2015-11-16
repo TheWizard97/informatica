@@ -9,6 +9,14 @@ body{
 	font-size:16px;
 	font-family: Tahoma, Geneva, sans-serif;
 }
+@font-face {
+    font-family: league;
+    src: url(../font/LeagueGothic-Regular.otf);
+}
+@font-face {
+    font-family: leagueI;
+    src: url(../font/LeagueGothic-Italic.otf);
+}
 .container{
 	width:100%;
 	margin:auto;
@@ -20,22 +28,56 @@ body{
 	width:100%;
 	margin:auto;
 }
+#topMenu{
+	float:right;
+	margin-right:50px;
+}
+#topMenu a{
+	text-decoration: none;
+	color:#666;
+}
 header{
 	width:100%;
 	display:none;
-	background:url('../images/banner.jpg');
+	/*background:url('../images/banner.jpg');*/
 	background-position: center; 
 	height:150px;
 }
-header span{
+header #titel{
 	font-size:100px;
-	padding-top:10px;
+	padding-top:20px;
 	margin-left:75px;
-	color:#ff0000;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color:#207cca;
+	/*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+	font-family: league;
+}
+header #slogan{
+	font-family: leagueI;
+	font-size:30px;
+	color:#207cca;
 }
 #zoekbalk{
 	float:right;
+	/*margin:100px 50px 0 0;*/
+	margin-top:100px;
+	margin-right:-250px;
+}
+#zoek{
+	padding:8px 15px;
+	background:rgba(250, 250, 250, 0.2);
+	border:1px solid #dbdbdb;
+}
+#zoekKnop {
+	position:relative;
+	padding:6px 15px;
+	left:-5px;
+	border:2px solid #207cca;
+	background-color:#207cca;
+	color:#fafafa;
+}
+#zoekKnop:hover  {
+	background-color:#fafafa;
+	color:#207cca;
 }
 .logo{
 	font-size:24px;
@@ -62,6 +104,7 @@ footer a{
 	text-decoration:none;
 }
 
+
 /*Responsive design*/
 @media only screen and (min-width : 320px) {
 
@@ -71,12 +114,20 @@ footer a{
 		display:block;
 	}
 }
+@media only screen and (max-width : 768px) {
+	#topMenu{
+		display:none;
+	}
+}
 @media only screen and (min-width : 768px) {
 	.logo{
 		display:none;
 	}
 	header{
 		display:block;
+	}
+	.extra{
+		display:none;
 	}
 }
 @media only screen and (min-width : 992px) {
